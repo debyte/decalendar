@@ -12,4 +12,4 @@ window.deCalendar = function(element, options) {
     utility: utility,
   };
 
-}
+};

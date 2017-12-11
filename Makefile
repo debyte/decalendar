@@ -16,7 +16,8 @@ watch:
 
 uglify:
 	uglify -s $(out_js) -o $(out_min_js)
-	uglifycss $(out_css) > $(out_min_css)
+	uglify -cs $(out_css) -o $(out_min_css)
 
 clean:
-	rm out/*.js
+	rm out/*.js out/*.min.css
+
