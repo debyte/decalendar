@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="decalendar.css">
     <script type="text/javascript">
       $(function () {
-        var calendar = deCalendar($('#calendar'));
-        calendar.viewDay(
+        var calendar = new deCalendar($('#calendar'));
+        calendar.day(
           moment().startOf('day').add(8, 'h'),
           moment().endOf('day').subtract(8, 'h'),
           moment.duration(30, 'm'),
@@ -32,6 +32,30 @@
             {
               id: 3,
               name: 'Track 3',
+            },
+          ]
+        ).addItems(
+          [
+            {
+              id: 1,
+              column: 1,
+              begin: moment().startOf('day').add(10, 'h'),
+              end: moment().startOf('day').add(11, 'h'),
+              name: 'Item 1',
+            },
+            {
+              id: 2,
+              column: 1,
+              begin: moment().startOf('day').add(11, 'h'),
+              end: moment().startOf('day').add(12, 'h'),
+              name: 'Item 2',
+            },
+            {
+              id: 3,
+              column: 3,
+              begin: moment().startOf('day').add(12, 'h').add(30, 'm'),
+              end: moment().startOf('day').add(13, 'h'),
+              name: 'Item 3',
             },
           ]
         );
