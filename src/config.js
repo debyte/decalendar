@@ -8,6 +8,7 @@ module.exports = {
 
   resizeDelay: 66,
   hoverDelay: 500,
+  moveDelay: 500,
 
   text: {
     en: {
@@ -38,6 +39,7 @@ module.exports = {
   class: {
     hover: 'calendar-hovering',
     majorRow: 'calendar-row-major',
+    moveItem: 'calendar-item-move',
     openCell: 'calendar-cell-open',
     targetItem: 'calendar-target',
   },

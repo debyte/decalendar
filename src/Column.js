@@ -12,6 +12,7 @@ function Column(view, values, $element) {
   this.items = [];
 
   var column = this;
+  
   $element.find(view.config.select.cell).on('click', function (event) {
     column.onClickCell($(this));
   });
