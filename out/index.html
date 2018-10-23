@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="decalendar.css">
     <script type="text/javascript">
       $(function () {
-        var calendar = new deCalendar($('#calendar'));
+        var calendar = new deCalendar($('#calendar'), {});
         calendar.day(
           moment().startOf('day').add(8, 'h'),
           moment().endOf('day').subtract(8, 'h'),
@@ -44,11 +44,25 @@
               name: 'Item 1',
             },
             {
+              id: 10,
+              column: 1,
+              begin: moment().startOf('day').add(10, 'h').add(15, 'm'),
+              end: moment().startOf('day').add(14, 'h'),
+              name: 'Item long',
+            },
+            {
               id: 2,
               column: 1,
-              begin: moment().startOf('day').add(11, 'h'),
-              end: moment().startOf('day').add(12, 'h'),
+              begin: moment().startOf('day').add(10, 'h').add(30, 'm'),
+              end: moment().startOf('day').add(11, 'h').add(30, 'm'),
               name: 'Item 2',
+            },
+            {
+              id: 11,
+              column: 1,
+              begin: moment().startOf('day').add(13, 'h'),
+              end: moment().startOf('day').add(15, 'h'),
+              name: 'Item test',
             },
             {
               id: 3,

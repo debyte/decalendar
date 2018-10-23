@@ -19,6 +19,15 @@ function Item(column, values, $element) {
   });
 }
 
+Item.prototype.notOverlaps = function (another) {
+  return this.end.isSameOrBefore(another.begin) ||
+    this.begin.isSameOrAfter(another.end);
+};
+
+Item.prototype.overlaps = function (another) {
+  return !this.notOverlaps(another);
+};
+
 Item.prototype.select = function () {
   this.move = false;
   var item = this;

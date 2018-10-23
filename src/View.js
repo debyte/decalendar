@@ -36,7 +36,9 @@ View.prototype.day = function (begin, end, step, tracks) {
       step: step,
     };
   });
-  this.createHead(columns);
+  if (this.config.displayHead) {
+    this.createHead(columns);
+  }
   this.createBody({
     begin: begin,
     end: end,
@@ -69,6 +71,10 @@ View.prototype.addItems = function (items) {
       this.$body.append($item);
       column.addItem(new Item(column, item, $item));
     }
+  }, this);
+  Object.keys(this.columns).forEach(function (id) {
+    this.columns[id].solveOverlaps();
+    this.columns[id].update();
   }, this);
 };
 

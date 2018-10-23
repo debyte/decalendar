@@ -5,6 +5,7 @@ module.exports = {
   defaultDuration: moment.duration(1, 'h'),
   rowTimeFormat: 'LT',
   isMajorRow: utility.isFullHour,
+  displayHead: true,
 
   resizeDelay: 66,
   hoverDelay: 500,
